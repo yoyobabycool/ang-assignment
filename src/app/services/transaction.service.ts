@@ -11,7 +11,7 @@ export class TransactionService {
   constructor(private http:HttpClient) {}
   transaction!: Transaction
   getTranscations() : Observable<Transaction[]>{
-	return this.http.get<Transaction[]>("./in-memory-date.services.ts")
+	return this.http.get<Transaction[]>("./in-memory-date.services")
 	}
   setTransaction(transaction:any):Observable<any>{
 	const options = new HttpHeaders({'Content-Type':'application/json'})
