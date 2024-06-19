@@ -15,6 +15,7 @@ export class TransactionService {
 	}
   setTransaction(transaction:any):Observable<any>{
 	const options = new HttpHeaders({'Content-Type':'application/json'})
+	console.log(transaction, options)
 	return this.http.put('api/transactions',transaction,{headers:options})
   }
 }
