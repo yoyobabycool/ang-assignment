@@ -11,10 +11,10 @@ export class TransactionService {
   constructor(private http:HttpClient) {}
   transaction!: Transaction
   getTranscations() : Observable<Transaction[]>{
-	return this.http.get<Transaction[]>("./in-memory-date.services")
+	return this.http.get<Transaction[]>("api/transactions")
 	}
   setTransaction(transaction:any):Observable<any>{
 	const options = new HttpHeaders({'Content-Type':'application/json'})
-	return this.http.put('./in-memory-date.services.ts',transaction,{headers:options})
+	return this.http.put('api/transactions',transaction,{headers:options})
   }
 }
