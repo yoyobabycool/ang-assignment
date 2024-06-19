@@ -36,6 +36,10 @@ export class TransactionDetailsComponent implements OnInit {
 		"id": this.id,
 		"date": this.date,
 		"comments": this.comments
-	}).subscribe()
+	}).subscribe(() => {
+      this.result = 'Transaction added successfully';
+    }, error => {
+      this.result = `Error: ${error}`;
+    })
   }
 }
