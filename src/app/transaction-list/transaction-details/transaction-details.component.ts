@@ -14,6 +14,7 @@ export class TransactionDetailsComponent implements OnInit {
   id!: number
   date!: string
   comments!: string
+result!: string
   ngOnInit(): void {
 	this.activatedRoute.params.subscribe(id=>{
 	this.id = id['id']
