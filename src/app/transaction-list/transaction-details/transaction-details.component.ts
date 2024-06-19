@@ -33,9 +33,9 @@ export class TransactionDetailsComponent implements OnInit {
   }
   pushComments(){
 	this.transactionService.setTransaction({
-		"id": 10,
-		"date": "18/12/2020",
-		"comments": "new"
+		"id": this.id,
+		"date": this.date,
+		"comments": this.comments
 	}).subscribe()
   }
 }
