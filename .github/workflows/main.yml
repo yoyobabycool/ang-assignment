@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Build the Angular app
-        run: npm run build -- --prod --output-path=docs --base-href=/angular-app/
+        run: npm run build -- --prod --output-path=docs --base-href=/ang-assignment/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
