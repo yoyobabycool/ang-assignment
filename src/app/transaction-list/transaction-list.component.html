@@ -1,0 +1,20 @@
+<div class="container">         
+  <table class="table table-responsive table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Comments</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let transaction of transactions">
+        <td>{{this.transaction.id}}</td>
+		<td>{{this.transaction.date}}</td>
+		<td>{{this.transaction.comments}}</td>
+		<td><a type="button" class="btn btn-link" href="./transactiondetails/{{this.transaction.id}}">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
